@@ -1,0 +1,55 @@
+projects:
+  - id: 01-reburn
+    emoji: "🔥"
+    name: "ReBurn"
+    tagline: "Виробництво коптилень"
+    path: "projects/01-reburn"
+    repo_url: "TBD"
+    stack: ["Solidworks", "Manufacturing", "Sales B2B/B2C"]
+    status: "active"
+    memory_scope: "reburn"
+    knowledge_collections: ["reburn_knowledge", "reburn_memories"]
+
+  - id: 02-dnk-shopify
+    emoji: "🛍"
+    name: "DNK Shopify"
+    tagline: "Експертний хаб + клієнти"
+    path: "projects/02-dnk-shopify"
+    repo_url: "TBD"
+    stack: ["Shopify", "Liquid", "Mentorship"]
+    status: "active"
+    memory_scope: "shopify"
+    knowledge_collections: ["dnk_shopify_knowledge", "dnk_shopify_memories"]
+
+  - id: 03-dnk-e
+    emoji: "💎"
+    name: "DNK-e"
+    tagline: "Авторська Shopify-тема"
+    path: "projects/03-dnk-e"
+    repo_url: "TBD"
+    stack: ["Shopify Theme", "Liquid", "JS", "CSS"]
+    status: "active"
+    memory_scope: "dnk-e"
+    knowledge_collections: ["dnk_e_knowledge", "dnk_e_memories"]
+
+  - id: 04-dnk-os
+    emoji: "🧠"
+    name: "DNK OS"
+    tagline: "AI Systems / Зброярня"
+    path: "projects/04-dnk-os"
+    repo_url: "https://github.com/Kuzmenko-top/DNK_HUB"
+    stack: ["Claude Code", "Antigravity", "Hermes", "MCP", "Qdrant"]
+    status: "active"
+    memory_scope: "dnk-os"
+    knowledge_collections: ["dnk_os_knowledge", "dnk_os_memories"]
+
+  - id: 05-craft-os
+    emoji: "🏭"
+    name: "Craft OS"
+    tagline: "BaaS для крафтових виробників"
+    path: "projects/05-craft-os"
+    repo_url: "TBD"
+    stack: ["TBD"]
+    status: "concept"
+    memory_scope: "craft-os"
+    knowledge_collections: ["craft_os_knowledge", "craft_os_memories"]

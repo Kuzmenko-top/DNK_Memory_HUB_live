@@ -1,0 +1,53 @@
+# DNK Git Research — Configuration
+# Сервіс пошуку та аналізу GitHub-репозиторіїв для VibeCoding підприємців
+
+search:
+  max_results: 20
+  min_stars: 10
+  languages: [python, typescript, javascript]
+  sort: stars
+  order: desc
+
+analysis:
+  model: gemini-2.5-flash
+  prompt_language: ukrainian
+  score_weights:
+    stars: 0.15
+    recent_activity: 0.20
+    dnk_fit: 0.45
+    readme_quality: 0.20
+
+domains:
+  ai-agents:
+    keywords: ["ai agent", "llm agent", "autonomous agent", "multi-agent"]
+    description: "AI-агенти та мультиагентні системи"
+  memory-systems:
+    keywords: ["vector store", "rag", "knowledge base", "embeddings", "mem0"]
+    description: "Системи пам'яті та RAG"
+  telegram-bots:
+    keywords: ["telegram bot", "aiogram", "python-telegram-bot"]
+    description: "Telegram-боти та міні-аппи"
+  saas-boilerplate:
+    keywords: ["saas boilerplate", "nextjs saas", "starter kit", "saas template"]
+    description: "SaaS шаблони та бойлерплейти"
+  ecommerce:
+    keywords: ["shopify app", "woocommerce", "ecommerce", "stripe integration"]
+    description: "E-commerce рішення"
+  devtools:
+    keywords: ["cli tool", "developer tool", "code generation", "vibe coding"]
+    description: "Інструменти розробника"
+  logistics:
+    keywords: ["shipping", "tracking", "nova poshta", "delivery api"]
+    description: "Логістика та доставка"
+  analytics:
+    keywords: ["analytics dashboard", "business metrics", "posthog"]
+    description: "Аналітика та метрики"
+
+storage:
+  library_path: data/library.json
+  reports_path: data/reports/
+  qdrant_collection: github-research
+
+output:
+  default_format: markdown
+  max_readme_chars: 2000

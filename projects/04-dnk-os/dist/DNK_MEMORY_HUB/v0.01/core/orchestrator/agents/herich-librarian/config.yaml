@@ -1,0 +1,76 @@
+model:
+  provider: google-genai
+  model: gemini-2.5-flash
+
+providers:
+  google-genai:
+    name: "Google Gemini API"
+    key_env: "GEMINI_API_KEY"
+  vertex-gemini:
+    name: "Vertex AI Gemini"
+    api: "https://us-central1-aiplatform.googleapis.com/v1/projects/dnk-ai-agent/locations/us-central1/endpoints/openapi"
+    key_env: "VERTEX_GEMINI_TOKEN"
+
+platforms:
+  telegram:
+    enabled: true
+    token: 8772106985:AAEKWf-FwbaG9ayDa3h8oCQcv85BjxGjTSM
+    allow_all_users: true
+    allowed_users:
+    - 641438026
+    extra:
+      group_topics:
+      - chat_id: -1003987879866
+        topics:
+        - name: "📥 Inbox"
+          icon_color: 7322096
+        - name: "💡 Ideas"
+          icon_color: 15417670
+          skill: idea-capture
+        - name: "📌 Project-A"
+          icon_color: 16766590
+          skill: task-classifier
+          context: project=project-a vault=projects/project-a
+        - name: "📌 Project-B"
+          icon_color: 9367192
+          skill: task-classifier
+          context: project=project-b vault=projects/project-b
+        - name: "📚 Knowledge"
+          icon_color: 6323595
+          skill: knowledge-capture
+
+TELEGRAM_HOME_CHANNEL: '-1003987879866'
+
+mcp_servers:
+  obsidian:
+    command: npx
+    args:
+    - -y
+    - obsidian-mcp
+    env:
+      VAULT_PATH: "../../../../memory/vault"
+  qdrant:
+    command: uvx
+    args:
+    - mcp-server-qdrant
+    env:
+      QDRANT_URL: http://localhost:6333
+      COLLECTION_NAME: global_knowledge
+  telegram:
+    command: node
+    args:
+    - ../integrations/telegram-bridge/index.js
+
+memory:
+  enabled: true
+  backend: mem0
+  user_id: owner
+
+# Кастомні налаштування для нашого Оркестратора
+orchestrator:
+  agent_id: herich-librarian
+  memory_scope: global
+  routing:
+    default_agent: herich-librarian
+    escalation_target: maks
+

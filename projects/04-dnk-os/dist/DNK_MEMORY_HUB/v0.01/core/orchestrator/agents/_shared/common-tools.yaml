@@ -1,0 +1,31 @@
+# Common Tools — доступні всім DNK-агентам
+
+tools:
+  - name: search_qdrant
+    description: Семантичний пошук у Qdrant
+    args: [collection, query, top_k]
+
+  - name: read_obsidian
+    description: Читати .md файл з Obsidian vault
+    args: [path]
+
+  - name: write_memory
+    description: Записати memory у власну колекцію агента
+    args: [content, metadata]
+
+  - name: promote_to_shared
+    description: Запропонувати Геричу промоутувати memory у shared pool
+    args: [memory_id, reason]
+
+  - name: write_audit_log
+    description: Записати подію в audit-log (автоматично для делегувань)
+    args: [event_type, details, timestamp]
+
+  - name: read_projects_yaml
+    description: Отримати маніфест проєктів (projects.yaml)
+    args: []
+
+  # TODO: додати після підключення MCP-серверів:
+  # - notion_read / notion_write
+  # - google_drive_read
+  # - telegram_send

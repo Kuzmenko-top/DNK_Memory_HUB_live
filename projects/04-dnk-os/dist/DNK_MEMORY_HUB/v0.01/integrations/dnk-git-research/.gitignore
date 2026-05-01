@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.venv_new/
+.env
+.uv_cache/
+
+# macOS
+.DS_Store
+
+# Project specific
+data/reports/*.md
+!data/reports/README.md
+data/expert_reports/*.md
+data/decomposition_plans/*.md
+data/recipes/*.json
+library.json.bak
+*.log
+
+# IDE
+.vscode/
+.idea/

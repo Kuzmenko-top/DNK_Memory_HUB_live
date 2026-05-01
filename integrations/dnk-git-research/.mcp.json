@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "dnk-git-research": {
+      "type": "stdio",
+      "command": "/Users/kuzmenko.top/Kuzmenko/MY LIFE WORK/DNK Vibe/DNK_Projects/DNK_Git_Research/.venv/bin/python",
+      "args": [
+        "/Users/kuzmenko.top/Kuzmenko/MY LIFE WORK/DNK Vibe/DNK_Projects/DNK_Git_Research/mcp_server/server.py"
+      ],
+      "env": {}
+    }
+  }
+}

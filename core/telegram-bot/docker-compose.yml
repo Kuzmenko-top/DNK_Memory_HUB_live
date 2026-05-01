@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  memory-hub:
+    build: .
+    container_name: dnk_memory_hub
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+    env_file:
+      - config/.env

@@ -1,0 +1,20 @@
+# Tools available to shopify-pro
+
+tools:
+  - name: search_qdrant
+    description: Семантичний пошук у власних колекціях
+    args: [collection, query, top_k]
+
+  - name: read_obsidian
+    description: Читати документ з Obsidian vault
+    args: [path]
+
+  - name: write_memory
+    description: Зберегти memory у відповідну колекцію
+    args: [content, metadata, collection]
+
+  - name: promote_to_shared
+    description: Запропонувати memory для shared_memory_pool (потребує підтвердження Герича)
+    args: [memory_id, reason]
+
+  # TODO: додати специфічні tools для цього агента

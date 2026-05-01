@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "shopify": {
+      "description": "Shopify Admin API — CRUD магазинів, продуктів, замовлень",
+      "path": "../integrations/shopify-mcp",
+      "status": "planned",
+      "collections_used": [
+        "dnk_shopify_knowledge"
+      ]
+    },
+    "obsidian": {
+      "description": "Читання/запис Obsidian vault через MCP",
+      "path": "../integrations/obsidian-mcp",
+      "status": "planned",
+      "collections_used": [
+        "global_knowledge"
+      ]
+    },
+    "telegram": {
+      "description": "Telegram bridge для Герича — отримувати/надсилати повідомлення",
+      "path": "../integrations/telegram-bridge",
+      "status": "planned"
+    },
+    "qdrant": {
+      "description": "Прямий доступ до Qdrant через MCP (альтернатива HTTP API)",
+      "url": "http://localhost:6333",
+      "status": "planned"
+    }
+  }
+}

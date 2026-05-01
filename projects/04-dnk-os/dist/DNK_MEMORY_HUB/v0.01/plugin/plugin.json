@@ -1,0 +1,7 @@
+{
+  "name": "dnk-os",
+  "version": "0.1.0",
+  "description": "DNK OS — orchestration plugin for Maks DNK's 5 projects. Skills, agents, commands shared across ReBurn, DNK Shopify, DNK-e, DNK OS, Craft OS.",
+  "author": "Maks DNK",
+  "license": "private"
+}

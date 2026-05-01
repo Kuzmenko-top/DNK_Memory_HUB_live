@@ -1,0 +1,34 @@
+model:
+  provider: google-genai
+  model: gemini-2.5-flash
+
+providers:
+  google-genai:
+    name: "Google Gemini API"
+    key_env: "GEMINI_API_KEY"
+
+
+mcp_servers:
+  obsidian:
+    command: npx
+    args:
+    - -y
+    - obsidian-mcp
+    env:
+      VAULT_PATH: "../../../../memory/vault"
+  qdrant:
+    command: uvx
+    args:
+    - mcp-server-qdrant
+    env:
+      QDRANT_URL: http://localhost:6333
+      COLLECTION_NAME: reburn_knowledge
+
+memory:
+  enabled: true
+  backend: mem0
+  user_id: owner
+
+orchestrator:
+  agent_id: reburn-engineer
+  memory_scope: reburn_knowledge

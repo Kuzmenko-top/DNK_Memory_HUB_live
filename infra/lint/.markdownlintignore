@@ -1,0 +1,6 @@
+integrations/dnk-git-research/data/reports/*
+integrations/dnk-git-research/data/expert_reports/*
+integrations/dnk-git-research/data/DNK_Repo_AUDIT/*
+**/venv/*
+**/.venv/*
+**/node_modules/*

@@ -1,0 +1,26 @@
+# Tools available to Герич-Бібліотекар
+
+tools:
+  - name: delegate_to_expert
+    description: Передати завдання спеціалізованому агенту
+    args: [agent_name, task, context]
+
+  - name: search_qdrant
+    description: Семантичний пошук у будь-якій колекції
+    args: [collection, query, top_k]
+
+  - name: read_obsidian
+    description: Читати документ з Obsidian vault
+    args: [path]
+
+  - name: write_audit_log
+    description: Записати подію делегування в audit-log
+    args: [from, to, task, result, timestamp]
+
+  - name: promote_to_shared
+    description: Промоутувати memory агента у shared_memory_pool
+    args: [memory_id, reason]
+
+  - name: flag_to_maks
+    description: Ескалювати питання до Макса (конфлікт, невизначеність)
+    args: [issue, context, urgency]
